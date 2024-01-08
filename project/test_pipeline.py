@@ -25,7 +25,7 @@ def test_merge_data():
     states_df = pd.read_csv(TOURIST_STATES_URL, encoding='latin1', sep=",")
     merged_df = pipeline.merge_data(tourist_df, states_df)
 
-    # Check if a specific column exists in the merged DataFrame
+    # Check if the required column exists in the merged DataFrame
     required_column = 'State(s)'
     assert required_column in merged_df.columns, f"Column '{required_column}' not found in merged DataFrame"
     
