@@ -72,6 +72,6 @@ def test_store_dataframes():
 
 
 def test_main():
-    # This is a system-level test that covers the entire pipeline
+    
     pipeline.main()
 
