@@ -9,7 +9,7 @@ on:
     - project/**  
 
 jobs:
-  tests-feeback:
+  tests-feedback:
     runs-on: ubuntu-latest
 
     steps:
