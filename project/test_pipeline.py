@@ -72,6 +72,6 @@ def test_store_dataframes():
 
 
 def test_main():
-    
+    #tests the whole pipeline
     pipeline.main()
 
