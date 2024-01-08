@@ -8,8 +8,8 @@ transportation_data_url="https://res.cloudinary.com/dx6obccn6/raw/upload/v170160
 
 
 # SQLite database file
-db_file1 = './data/tourist.sqlite'
-db_file2 = './data/transport.sqlite'
+db_file1 = '../data/tourist.sqlite'
+db_file2 = '../data/transport.sqlite'
 
 
 def fetch_and_transform_dataset_1(data):
@@ -78,6 +78,8 @@ def store_dataframes(tourist_df, transport_df):
     engine2= create_engine(f'sqlite:///{db_file2}')
     tourist_df.to_sql('Tourist', engine1, if_exists="replace")
     transport_df.to_sql('Transport', engine2, if_exists="replace")
+    engine1.dispose()
+    engine2.dispose()
 
 def main():
     tourist = fetch_and_transform_dataset_1(tourist_data_url)
