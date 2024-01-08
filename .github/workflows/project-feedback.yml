@@ -1,0 +1,31 @@
+name: Contiuous Integration
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - data/**
+    - project/**  
+
+jobs:
+  tests-feeback:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        pip install -r ../project/requirements.txt  # Replace with your actual requirements file
+
+    - name: Run tests
+      run: ../project/tests.sh  # Replace with the actual path to your tests.sh file
+
+    
