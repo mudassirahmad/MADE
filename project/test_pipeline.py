@@ -9,7 +9,7 @@ TOURIST_STATES_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v170462175
 TRANSPORTATION_DATA_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v1701604752/transportation_vpbfi6.csv"
 
 
-
+#check if the data sets are being fetched from the sources
 def test_fetch_and_transform_dataset_1():
     df = pipeline.fetch_and_transform_dataset_1(TOURIST_DATA_URL)
     assert isinstance(df, pd.DataFrame)
