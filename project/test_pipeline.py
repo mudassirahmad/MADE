@@ -33,15 +33,14 @@ def test_merge_data():
     assert not merged_df.empty
 
 
+# test if the dataframes are store in the Database and that file is created or not
 def test_store_dataframes():
 
     # Store the original database paths for later restoration
     org_db_file1 = pipeline.db_file1
-    #org_db_file2 = pipeline.db_file2
     try:
         # Use temporary paths for testing
         temp_db_file = "../data/data_test.sqlite"
-        #temp_db_file2 = "../data/transport_test.sqlite"
 
         tourist_df = pipeline.fetch_and_transform_dataset_1(TOURIST_DATA_URL)
         transport_df = pipeline.fetch_and_transform_dataset_2(TRANSPORTATION_DATA_URL)
@@ -50,24 +49,20 @@ def test_store_dataframes():
 
         # Temporarily change the database paths for the test
         pipeline.db_file1 = temp_db_file
-        #pipeline.db_file2 = temp_db_file2
 
         # Call the original function
         pipeline.store_dataframes(tourist_data_merged, transport_df)
         assert os.path.exists(temp_db_file)
-        #assert os.path.exists(temp_db_file2)
         
     
     finally:
         # Restore the original database paths
         pipeline.db_file1 = org_db_file1
-        #pipeline.db_file2 = org_db_file2
 
         time.sleep(5)
 
         # Clean up: Remove temporary files
         os.remove(temp_db_file)
-        #os.remove(temp_db_file2)
 
 
 
