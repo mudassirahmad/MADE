@@ -5,7 +5,7 @@ import time
 
 # Test data URLs
 TOURIST_DATA_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v1701604753/tourists-data_aas2zo.csv"
-TOURIST_STATES_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v1704621759/tourist_areas_with_states_ntknb0.csv"
+TOURIST_STATES_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v1704827971/tourist_areas_with_states_zwmucy.csv"
 TRANSPORTATION_DATA_URL = "https://res.cloudinary.com/dx6obccn6/raw/upload/v1701604752/transportation_vpbfi6.csv"
 
 

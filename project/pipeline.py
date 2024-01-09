@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 
 
 tourist_data_url="https://res.cloudinary.com/dx6obccn6/raw/upload/v1701604753/tourists-data_aas2zo.csv"
-tourist_states_url="https://res.cloudinary.com/dx6obccn6/raw/upload/v1704621759/tourist_areas_with_states_ntknb0.csv"
+tourist_states_url="https://res.cloudinary.com/dx6obccn6/raw/upload/v1704827971/tourist_areas_with_states_zwmucy.csv"
 transportation_data_url="https://res.cloudinary.com/dx6obccn6/raw/upload/v1701604752/transportation_vpbfi6.csv"
 
 
@@ -59,7 +59,7 @@ def merge_data(tourist,states):
 
     missing_values = {
         'Oberes Maintal - Coburger Land (bis 2016)': 'Baden-Württemberg',
-        'Nördlicher Schwarzwald': 'Bavaria',
+        'Nördlicher Schwarzwald': 'Bayern',
     }
 
     #rows_with_nan=tourist_data[tourist_data['State(s)'].isna()]
