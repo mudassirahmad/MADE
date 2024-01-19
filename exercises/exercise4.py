@@ -35,7 +35,5 @@ df.to_sql('temperatures', 'sqlite:///temperatures.sqlite', if_exists='replace', 
         "Monat": sqlalchemy.BIGINT,
         "Temperatur": sqlalchemy.FLOAT,
         "Batterietemperatur": sqlalchemy.FLOAT,
-        "Geraet aktiv": sqlalchemy.BIGINT,
+        "Geraet aktiv": sqlalchemy.TEXT,
     })
-
-print(df.head())
