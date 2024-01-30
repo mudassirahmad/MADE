@@ -68,7 +68,7 @@ pipeline GtfsPipeline{
         -> StopsTextFileInterpreter
         -> CSVInterpreter
         -> StopsTableInterpreter
-        -> StopsSQLiteLoader
+        -> StopsSQLiteLoader;
 
 
 }
